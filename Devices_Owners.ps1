@@ -14,11 +14,9 @@ Else
 		Import-Module AzureAD -ErrorAction SilentlyContinue 			
 	} 
 	
-$Ask_Creds = Connect-MSGraph
-
 Try
 	{
-		$Ask_Creds = Connect-MSGraph
+		$Ask_Creds = Connect-AzureAD
 		write-host "Conexion OK to your tenant"
 	}
 Catch
